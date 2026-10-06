@@ -1,0 +1,17 @@
+{
+  "name": "Thư Viện Học Liệu Y Khoa NPTMed",
+  "short_name": "NPTMed",
+  "description": "Thư viện học liệu y khoa được sáng lập và điều hành bởi Nguyễn Phi Trường.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#059669",
+  "icons": [
+    {
+      "src": "/nptmed_icon_1784429300954.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

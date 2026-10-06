@@ -1,0 +1,6 @@
+{
+  "name": "NPTMed",
+  "description": "Thư viện Học liệu Y khoa NPTMed - Chia sẻ kiến thức y khoa, tài liệu, ebook miễn phí và pro, video học tập và shop y khoa học tập.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

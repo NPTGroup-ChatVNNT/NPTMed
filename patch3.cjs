@@ -1,0 +1,9 @@
+const fs = require('fs');
+let code = fs.readFileSync('src/components/AssistantView.tsx', 'utf8');
+
+code = code.replace(
+  '<span className="hidden sm:inline">Làm mới</span>\n        </button>\n      </div>\n\n      {/* Chat Area */}',
+  `<span className="hidden sm:inline">Làm mới</span>\n        </button>\n      </div>\n\n      <div className="bg-emerald-50 px-6 py-3 border-b border-emerald-100 flex items-center justify-between">\n        <p className="text-xs text-emerald-800 font-medium">\n          Tránh nghẽn mạng do truy cập công khai?\n        </p>\n        <button onClick={() => setShowSettings(!showSettings)} className="text-xs font-semibold px-3 py-1.5 bg-white border border-emerald-200 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">\n          {showSettings ? 'Đóng cài đặt' : 'Cài đặt API Key cá nhân'}\n        </button>\n      </div>\n\n      {showSettings && (\n        <div className="bg-emerald-50/50 p-6 border-b border-emerald-100">\n          <label className="block text-sm font-bold text-slate-700 mb-2">Gemini API Key Cá Nhân</label>\n          <input \n            type="password" \n            placeholder="Nhập API Key của bạn..." \n            value={personalApiKey} \n            onChange={(e) => setPersonalApiKey(e.target.value)} \n            className="w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-4 focus:ring-emerald-500/10 transition-all mb-3"\n          />\n          <p className="text-xs text-emerald-700/80 leading-relaxed">Vì web được truy cập công khai và sử dụng chung một key mặc định, hệ thống có thể bị nghẽn (rate limit) khi có nhiều người hỏi cùng lúc. Hãy nhập Gemini API Key cá nhân của bạn (miễn phí từ Google AI Studio) để có trải nghiệm phản hồi lập tức và riêng tư.</p>\n        </div>\n      )}\n\n      {/* Chat Area */}`
+);
+
+fs.writeFileSync('src/components/AssistantView.tsx', code);
